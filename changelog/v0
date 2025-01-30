@@ -15,20 +15,23 @@
 - **Update**: Updated the **Venue and Accommodation** section.
 
 ### v0.4
-- **Delete**: All outdated contents deleted 
+- **Delete**: All outdated contents deleted
 - **Update**: All new content with unclear things changed with "to be decided" placeholder
 
 ### v0.4.1
-1 删掉physical
-2 时间是 10-13
-3 to be decided > TBD
-4 program先去掉
-5 tutorial chair改成 TBD
+- **Delete**: Removed "physical" references
+- **Update**: Event date range set to **10-13**
+- **Standardize**: Changed "to be decided" to **TBD** format
+- **Delete**: Temporarily removed "Program" section
+- **Update**: Marked Tutorial Chair as **TBD**
 
-### v0.4.2
+### v1.0 (Tagged as `v0.4.2` in Git)
+- **Release**: Published the website for ICFEM 2025
+- **Update**: Scope & Topics content revised
 
-- **Update**: Scope & Topics updated
+### v1.0.1 (Tagged as `v0.4.3` in Git)
+- **Update**: Scope & Topics content refined
 
-### v0.4.3
-
-- **Update**: Scope & Topics updated
+### v1.0.2
+- **Update**: Honorable Chairs information updated
+- **Delete**: Temp backup files deleted
