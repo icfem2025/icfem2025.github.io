@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICFEM 2025 - West Lake Hiking Tour</title>
+  <style>
+    :root {
+      --icfem-blue: #0a4e8b;
+      --light-blue: #eaf2fb;
+      --text-color: #222;
+      --gray: #555;
+    }
+
+    body {
+      font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+      background: linear-gradient(to bottom right, #ffffff, #f5f7fa);
+      color: var(--text-color);
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* === New Hero Header === */
+    header {
+      position: relative;
+      text-align: center;
+      color: white;
+      height: 360px;
+      background: url('images/westlake-banner.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 0;
+    }
+
+    header h1 {
+      position: relative;
+      z-index: 1;
+      font-size: 3rem;
+      font-weight: 700;
+      text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+      margin: 0;
+      letter-spacing: 0.5px;
+    }
+
+    header p {
+      position: relative;
+      z-index: 1;
+      margin-top: 16px;
+      font-size: 1.25rem;
+      font-style: italic;
+      color: #e6f2ec;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+    }
+
+    header .divider {
+      position: relative;
+      z-index: 1;
+      width: 90px;
+      height: 4px;
+      margin-top: 22px;
+      background: linear-gradient(90deg, #1db38a, #93e4cf);
+      border-radius: 2px;
+    }
+
+    section {
+      max-width: 960px;
+      margin: 70px auto;
+      padding: 0 24px;
+    }
+
+    h2 {
+      border-bottom: 3px solid var(--icfem-blue);
+      padding-bottom: 8px;
+      margin-bottom: 24px;
+      color: var(--icfem-blue);
+      font-size: 1.6rem;
+    }
+
+    h3 {
+      color: var(--icfem-blue);
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.05rem;
+      color: var(--text-color);
+    }
+
+    .route-map {
+      text-align: center;
+      margin: 50px 0;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      padding: 30px 20px;
+    }
+
+    .route-map img {
+      max-width: 720px;
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .route-map img:hover {
+      transform: scale(1.02);
+    }
+
+    .spot {
+      margin-bottom: 60px;
+      background: white;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .spot:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    }
+
+    .spot img {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .spot img:hover {
+      transform: scale(1.02);
+    }
+
+    iframe {
+      border: 0;
+      width: 100%;
+      height: 450px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    a.map-link {
+      color: var(--icfem-blue);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a.map-link:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      line-height: 1.8;
+    }
+
+    li strong {
+      color: var(--icfem-blue);
+    }
+
+    /* === Registration Button === */
+    .register-btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #0a4e8b, #0d66b8);
+      color: white;
+      font-size: 1.15rem;
+      font-weight: 600;
+      padding: 15px 40px;
+      border-radius: 10px;
+      text-decoration: none;
+      text-align: center;
+      margin-top: 25px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(10, 78, 139, 0.2);
+      animation: pulse 3s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 rgba(10,78,139,0.3); }
+      50% { box-shadow: 0 0 20px rgba(10,78,139,0.4); }
+    }
+
+    .register-btn:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(90deg, #0d66b8, #1078d4);
+    }
+
+    footer {
+      background-color: var(--icfem-blue);
+      color: white;
+      text-align: center;
+      padding: 24px;
+      font-size: 0.95rem;
+      margin-top: 80px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- === New Hero Header === -->
+  <header>
+    <h1>West Lake Hiking Tour</h1>
+    <p>Explore the timeless beauty of Hangzhou’s <span style="color:#b3f3d7;font-weight:500;">West Lake</span></p>
+    <div class="divider"></div>
+  </header>
+
+  <!-- === Rest of page remains unchanged === -->
+  <section>
+    <h2>🌸 Overview</h2>
+    <p>
+      To enrich your experience at <strong>ICFEM 2025</strong>, we warmly invite all participants to join our <em>West Lake Hiking Tour</em> in Hangzhou — one of China’s most iconic and picturesque destinations.  
+      The lake, surrounded by temples, gardens, and ancient causeways, has inspired poets and scholars for over a thousand years.  
+      This relaxing half-day walking tour offers a perfect blend of nature, culture, and gentle exercise.
+    </p>
+  </section>
+
+  <section>
+    <h2>🚶‍♂️ Suggested Hiking Route</h2>
+    <p>
+      The recommended hiking route is approximately <strong>6 kilometers</strong> and takes around <strong>3 hours</strong> at a leisurely pace.  
+      The path follows the classic “Half Lake, Half City” loop, allowing participants to enjoy both natural scenery and cultural landmarks.
+    </p>
+
+    <div class="route-map">
+      <img src="images/westlake-route.jpg" alt="West Lake Hiking Route Map">
+      <p><em>Suggested Route: Broken Bridge → Bai Causeway → Solitary Hill → Su Causeway → Leifeng Pagoda</em></p>
+    </div>
+
+    <div class="route-map">
+      <h3>📍 Interactive Map</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27573.682970314963!2d120.14611519521486!3d30.24533478370661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x344b62c0d149f2cb%3A0xf0f28861cfd37ec9!2z6KW_5rmW!5e0!3m2!1szh-CN!2shk!4v1759987679766!5m2!1szh-CN!2shk" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <p style="font-size:0.9rem; color:#555; margin-top:10px;">
+        *If the map does not load, you can view it directly on <a href="https://www.google.com/maps/place/West+Lake,+Hangzhou" target="_blank" class="map-link">Google Maps</a>.
+      </p>
+    </div>
+  </section>
+
+
+  <section>
+    <h2>🏞️ Highlights Along the Route</h2>
+
+    <div class="spot">
+      <h3>1. <a href="https://maps.app.goo.gl/Hvtfe3b8Lt8Zqvgs9" target="_blank" class="map-link">Broken Bridge (断桥残雪)</a></h3>
+      <p>
+        The starting point of our hike, the Broken Bridge is famous for its appearance in the Chinese legend “The Legend of the White Snake.”  
+        Despite its name, the bridge is intact — the “broken” refers to the illusion created by snow melting unevenly in winter.
+      </p>
+      <img src="images/broken-bridge.jpg" alt="Broken Bridge">
+    </div>
+    <!-- https://www.tripadvisor.com/Attraction_Review-g298559-d1807744-Reviews-Duan_Bridge-Hangzhou_Zhejiang.html -->
+
+    <div class="spot">
+      <h3>2. <a href="https://maps.app.goo.gl/Bf4jaH9cTrnR7pv79" target="_blank" class="map-link">Bai Causeway (白堤)</a></h3>
+      <p>
+        Named after the Tang dynasty poet Bai Juyi, the Bai Causeway stretches gracefully across the lake.  
+        Walking here, you'll find willow trees, arching bridges, and reflections of boats gliding on the water — a perfect photo spot.
+      </p>
+      <img src="images/bai-causeway.jpg" alt="Bai Causeway">
+    </div>
+    <!-- https://pic.hangzhou.com.cn/hzyx/content/content_8705449.html -->
+
+    <div class="spot">
+      <h3>3. <a href="https://maps.app.goo.gl/V7AHA4CHZyDhSYmT7" target="_blank" class="map-link">Solitary Hill (孤山)</a></h3>
+      <p>
+        The only natural island on West Lake, Solitary Hill is home to historic pavilions, the Xiling Seal Engravers’ Society, and beautiful views of the lake.  
+        It is a tranquil place where nature and art merge.
+      </p>
+      <img src="images/solitary-hill.jpg" alt="Solitary Hill">
+    </div>
+    <!-- https://zhuanlan.zhihu.com/p/71940308 ??? -->
+
+    <div class="spot">
+      <h3>4. <a href="https://maps.app.goo.gl/2CgyQhVmrRwv3gTs7" target="_blank" class="map-link">Su Causeway (苏堤春晓)</a></h3>
+      <p>
+        This scenic dyke, built by the poet-governor Su Dongpo during the Song dynasty, is lined with willow trees and stone bridges.  
+        It is one of the “Ten Scenes of West Lake,” renowned for its serene morning view.
+      </p>
+      <img src="images/su-causeway.jpg" alt="Su Causeway">
+    </div>
+
+    <div class="spot">
+      <h3>5. <a href="https://maps.app.goo.gl/9eGY2wHSYifHRzJK6" target="_blank" class="map-link">Leifeng Pagoda (雷峰塔)</a></h3>
+      <p>
+        The tour concludes at Leifeng Pagoda, standing tall on Sunset Hill.  
+        The pagoda offers panoramic views of West Lake and Hangzhou city — a rewarding end to the hike.
+      </p>
+      <img src="images/leifeng-pagoda.jpg" alt="Leifeng Pagoda">
+    </div>
+
+    <p style="text-align: center; font-size: 0.85rem; color: var(--gray); margin-top: 30px; font-style: italic;">
+      All images are sourced from Wikimedia Commons or Wikipedia under public license or fair use.
+    </p>
+  </section>
+
+  <section>
+    <h2>Schedule & Registration</h2>
+    <ul>
+      <li><strong>Date:</strong> November 13, 2025 (Thursday Afternoon)</li>
+      <li><strong>Duration:</strong> 14:00 – 17:00</li>
+      <li><strong>Meeting Point:</strong> Conference Venue Lobby</li>
+      <li><strong>Participation:</strong> Free for ICFEM 2025 attendees</li>
+    </ul>
+    
+    <!-- <div style="text-align: center; margin-top: 30px;">
+      <h4 style="margin-bottom: 12px; color: var(--icfem-blue); font-size: 1.3rem;">Registration Link</h4>
+      <p style="margin-bottom: 24px; font-size: 1.05rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+        Please select an appropriate link to complete your registration.
+      </p>
+    </div> -->
+
+    <h2>Registration Link</h2>
+      <div style="text-align: center;">
+        <p style="margin-bottom: 24px; font-size: 1.05rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+          Please select an appropriate link to complete your registration.
+        </p>
+        
+        <p style="margin-bottom: 8px; font-size: 1rem;">
+          For participants outside Chinese Mainland, please use the following link to register.<br>
+          <a href="https://forms.gle/evioiji2qTnxUV3CA" target="_blank" rel="noopener"
+             style="display: inline-block; background: var(--icfem-blue); color: white; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.3s;">
+            Overseas Delegates Register here
+          </a>
+        </p>
+
+        <p style="margin-bottom: 8px; font-size: 1rem;">
+          For participants in Chinese Mainland, please use the following link to register.<br>
+          <a href="https://www.wjx.cn/vm/OFMwpiE.aspx#" target="_blank" rel="noopener"
+             style="display: inline-block; background: var(--icfem-blue); color: white; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.3s;">
+            Chinese Mainland Delegates Register here
+          </a>
+        </p>
+      </div>
+    </div>
+    <!-- <div style="text-align:center;">
+      <a href="#" target="_blank" class="register-btn">
+        Register for the Hiking Tour
+      </a>
+    </div> -->
+  </section>
+
+  <footer>
+    <p>© ICFEM 2025 | Hangzhou, China | Organized by Zhejiang University</p>
+  </footer>
+</body>
+</html>
