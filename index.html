@@ -1100,12 +1100,88 @@
 
   <section class="bg-dark py-5" id="sponsors">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-10 mx-auto text-center">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <!-- Section Title: Center-aligned -->
+                <h2 class="section-heading text-white mb-5 text-center">Official Sponsors</h2>
 
-          <h2 class="section-heading text-white mb-5">Official Sponsors</h2>
+                <!-- Sponsor Table: 2 rows × 3 columns | No borders | Uniform background cards -->
+                <div class="table-responsive mb-6">
+                    <style>
+                        /* 1. Uniform background card: Fixed size for all sponsors */
+                        .sponsor-card {
+                            width: 180px !important; /* Fixed card width */
+                            height: 100px !important; /* Fixed card height (unifies background size) */
+                            margin: 0 auto !important; /* Center card in table cell */
+                            display: flex !important;
+                            align-items: center !important; /* Vertically center logo */
+                            justify-content: center !important; /* Horizontally center logo */
+                            border-radius: 4px !important; /* Optional: Soften corners */
+                        }
+                        /* 2. Uniform logo styling: Prevent stretching, maintain aspect ratio */
+                        .sponsor-logo {
+                            max-width: 160px !important; /* Max logo width (fits in card) */
+                            max-width: 160px !important; /* Max logo width (fits in card) */
+                            max-height: 90px !important; /* Max logo height (fits in card) */
+                            object-fit: contain !important; /* Keep logo intact (no stretch) */
+                        }
+                        /* 3. Table style: Ensure no borders/spacing issues */
+                        .sponsor-table {
+                            border-collapse: collapse !important;
+                            max-width: 90% !important;
+                        }
+                        .sponsor-table tr, .sponsor-table td {
+                            border: none !important;
+                            padding: 1rem !important; /* Spacing between cards */
+                        }
+                        /* 4. Custom background colors (per requirement) */
+                        .bg-zju-blue { background-color: rgb(0, 63, 136) !important; } /* Zhejiang University: Truth-seeking blue */
+                        .bg-white { background-color: #FFFFFF !important; } /* Others: White background (solves CAS transparent issue) */
+                    </style>
 
-          <p class="mb-4 text-white">TBD</p>
+                    <table class="sponsor-table table table-borderless mx-auto">
+                        <tbody>
+                            <tr>
+                                <td class="text-center">
+                                    <div class="sponsor-card bg-white">
+                                        <img src="img/logos/huawei.png" alt="Huawei Technologies Co., Ltd" class="sponsor-logo">
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="sponsor-card bg-white">
+                                        <img src="img/logos/ant_research_cn.png" alt="Ant Research" class="sponsor-logo">
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <!-- <div class="sponsor-card bg-zju-blue"> -->
+                                    <div class="sponsor-card bg-white">
+                                        <img src="img/logos/ngics.png" alt="Zhejiang University" class="sponsor-logo">
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- <tr>
+                                <td class="text-center">
+                                    <div class="sponsor-card bg-white">
+                                        <img src="img/logos/CAS.png" alt="Chinese Academy of Sciences" class="sponsor-logo">
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="sponsor-card bg-white">
+                                        <img src="img/logos/placeholder.png" alt="Zhejiang University NGICS Platform" class="sponsor-logo">
+                                    </div>
+                                    <p class="text-muted small mt-2 mb-0">Logo Pending</p>
+                                </td>
+                                <td class="text-center">
+                                    <div class="sponsor-card bg-white">
+                                        <img src="img/logos/nsfc.jpg" alt="National Natural Science Foundation of China" class="sponsor-logo">
+                                    </div>
+                                </td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+
+          <!-- <p class="mb-4 text-white">TBD</p> -->
           <!--
           <p class="mb-2"
             style="padding: 10px;background-color: transparent; width: 1000px;margin-left: auto; margin-right: auto;">
@@ -1130,7 +1206,23 @@
                 height="100"></a>
           </p>
           -->
-          <p class="text-white mb-3 text-left" style="line-height: 1.6;">
+          <!-- Current Sponsors Section -->
+          <!-- <div class="text-left mb-6">
+            <p class="text-white mb-3" style="line-height: 1.6;">
+              We are very grateful to our current official sponsors, whose support makes ICFEM'25 possible:
+            </p>
+            <ul class="text-white pl-5 mb-4" style="line-height: 1.8; list-style-type: disc;">
+              <li>Huawei Technologies Co., Ltd</li>
+              <li>Ant Research</li>
+              <li>Zhejiang University</li>
+              <li>Chinese Academy of Sciences (in particular its Institute of Software)</li>
+              <li>Zhejiang University NGICS Platform</li>
+              <li>National Natural Science Foundation of China</li>
+            </ul>
+          </div> -->
+
+          <!-- Original Sponsorship Value & Recruitment Message (retained and aligned) -->
+          <!-- <p class="text-white mb-3 text-left" style="line-height: 1.6;">
             ICFEM'25 is an outstanding opportunity for you to reach the "thought leaders" in
             this industry with your message, and for your Software Engineering team to network and exchange ideas with
             their peers in this unique and innovative forum.
@@ -1144,7 +1236,7 @@
           <p class="text-white mb-0 text-left" style="line-height: 1.6;">
             New sponsorship are welcome and any entity wishing to become an official sponsor
             may contact the sponsorship chair.
-          </p>
+          </p> -->
 
         </div>
       </div>
@@ -1242,6 +1334,14 @@
           <h4 class="section-heading">Workshop Chair</h4>
           <p>
             <a href="https://fiction-zju.github.io/author/mingshuai-chen/">Mingshuai Chen</a>, Zhejiang University, China
+          </p>
+
+          <hr class="my-4">
+          <h4 class="section-heading">Local Organization Chairs</h4>
+          <p>
+            <a >Dongxia Wang</a>, Zhejiang University, China<br />
+            <a >Peixin Zhang</a>, Singapore Management University, Singapore<br />
+            <a >Xiaofen Zheng</a>, Zhejiang University, China<br />
           </p>
 
           
